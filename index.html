@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Canvas Drawing: Rectangle and Circle</h1>
+
+    <!-- Canvas Element -->
+    <canvas id="myCanvas" width="500" height="400"></canvas>
+
+    <!-- JavaScript to Draw Shapes -->
+    <script>
+        // Get the canvas element
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d'); // Get the 2D drawing context
+
+        // Draw a rectangle
+        ctx.fillStyle = "#FF5733"; // Set the fill color for the rectangle
+        ctx.fillRect(50, 50, 150, 100); // x, y, width, height
+
+        // Draw a circle
+        ctx.beginPath(); // Begin a new path for the circle
+        ctx.arc(300, 150, 50, 0, Math.PI * 2, false); // x, y, radius, start angle, end angle
+        ctx.fillStyle = "#33FF57"; // Set the fill color for the circle
+        ctx.fill(); // Fill the circle
+        ctx.stroke(); // Outline the circle
+    </script>
+
+</body>
+
+</html>
